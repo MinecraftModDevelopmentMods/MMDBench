@@ -1,0 +1,8 @@
+rootProject.name = mod_name
+
+def potentialMMdLib = file(rootDir.parent.concat("\\MMDLib"))
+if (potentialMMdLib.exists()) {
+    println('MMDLib project found. Including!')
+    include ':MMDLib'
+    project(':MMDLib').projectDir = potentialMMdLib
+}
